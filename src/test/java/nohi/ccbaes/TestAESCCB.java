@@ -19,6 +19,7 @@ public class TestAESCCB {
         String key = "Pq5hf2h8cz/c1S8xNlIZLw==";
         String res = "这里是中文...";
         System.out.println("原文:" + res);
+        // 需求添加libs目录下 NKEncrypter-1.7.1.jar 至 依赖
         res = EncrypterAESTool.encryptByStr(res, key);
         System.out.println("加密后:" + res);
         res = EncrypterAESTool.decryptByStr(res, key);
