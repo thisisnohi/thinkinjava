@@ -30,7 +30,7 @@
       <artifactId>fastjson</artifactId>
       <version>1.2.47</version>
     </dependency>
-    
+
     <dependency>
       <groupId>com.ccb</groupId>
       <artifactId>NKEncrypter</artifactId>
@@ -101,12 +101,24 @@
       <artifactId>jsch</artifactId>
       <version>0.1.54</version>
     </dependency>
+
+    <!-- 日志配置 -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+    </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.30</version>
-      <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>commons-net</groupId>
       <artifactId>commons-net</artifactId>
