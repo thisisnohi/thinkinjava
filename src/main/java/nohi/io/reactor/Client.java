@@ -1,5 +1,6 @@
 package nohi.io.reactor;
 
+import javax.sound.midi.Soundbank;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.InetSocketAddress;
@@ -15,13 +16,17 @@ public class Client {
     public static void main(String[] args) {
         try {
             Socket socket = new Socket();
-            socket.connect(new InetSocketAddress("localhost", 9090));
+            socket.connect(new InetSocketAddress("localhost", 10000));
             new Thread(() -> {
                 while (true) {
                     try {
                         InputStream inputStream = socket.getInputStream();
                         byte[] bytes = new byte[1024];
                         int size = inputStream.read(bytes);
+                        if (size <= 0) {
+                            System.out.println("over.....");
+                            System.exit(1);
+                        }
                         String msg = new String(bytes, 0, size, StandardCharsets.UTF_8);
                         System.out.println(msg);
                         if ("exit".equalsIgnoreCase(msg)) {
