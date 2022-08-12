@@ -12,7 +12,7 @@ import java.security.SecureRandom;
  * @author NOHI
  * 2021-08-09 15:23
  **/
-public class TestAESCCB {
+public class TestAESCCC {
 
     @Test
     public void testEncode(){

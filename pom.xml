@@ -32,7 +32,7 @@
     </dependency>
 
     <dependency>
-      <groupId>com.ccb</groupId>
+      <groupId>com.ccc</groupId>
       <artifactId>NKEncrypter</artifactId>
       <version>1.7.1</version>
       <scope>system</scope>

@@ -21,9 +21,6 @@ import java.security.spec.InvalidParameterSpecException;
  **/
 public class TestAesCBC {
 
-    /**
-     * ccb公众号提供
-     */
     @Test
     public void test1() throws NoSuchPaddingException, UnsupportedEncodingException, InvalidKeyException, NoSuchAlgorithmException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException, InvalidParameterSpecException {
         String content = "this is content";
