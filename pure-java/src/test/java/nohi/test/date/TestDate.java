@@ -9,9 +9,8 @@ import java.util.Random;
 
 /**
  * @author NOHI
- * @program: nohi-think
  * @description:
- * @create 2020-03-26 17:13
+ * @date 2020-03-26 17:13
  **/
 public class TestDate {
 
