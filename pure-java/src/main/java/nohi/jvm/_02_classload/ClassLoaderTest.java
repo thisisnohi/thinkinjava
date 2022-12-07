@@ -43,7 +43,7 @@ public class ClassLoaderTest {
      * 显示加载路径
      */
     @Test
-    public void showClassLoader(){
+    public void showClassLoader() {
         System.out.println("===========BootstrapClassLoader============");
         // 获取BootstrapClassLoader加载路径
         URL[] urls = sun.misc.Launcher.getBootstrapClassPath().getURLs();
@@ -61,5 +61,28 @@ public class ClassLoaderTest {
         for (String s : extDir.split(":")) {
             System.out.println(s);
         }
+    }
+
+    @Test
+    public void showClassLoader2() throws ClassNotFoundException {
+
+        // null 引导类加载器
+        ClassLoader classLoader = Class.forName("java.lang.String").getClassLoader();
+        System.out.println("clasLoader:" + classLoader);
+
+        // AppClassLoader  系统类加载器
+        classLoader = Class.forName("nohi.jvm._02_classload.ClassLoaderTest").getClassLoader();
+        System.out.println("clasLoader:" + classLoader);
+
+        // null 引导类加载器
+        String[] arrStr = new String[10];
+        System.out.println("String[] clasLoader:" + arrStr.getClass().getClassLoader());
+
+        // AppClassLoader  系统类加载器
+        System.out.println("ClassLoaderTest[] clasLoader:" + ClassLoaderTest[].class.getClassLoader());
+
+        // null  基本类型不需要加载器
+        int[] arr2 = new int[10];
+        System.out.println("int[] clasLoader:" + arr2.getClass().getClassLoader());
     }
 }
