@@ -41,7 +41,7 @@ public class TestThreadPoolExecutor {
         for (int i = 0; i < taskSize; i++) {
             System.out.println("task:" + i);
             try {
-                futureList.add(executor.submit(new TestCallable(i, 2)));
+                futureList.add(executor.submit(new MyCallable(i, 2)));
             } catch (Exception e) {
                 System.out.println("task:" + i + " 执行异常:" + e.getMessage());
             }
@@ -77,7 +77,7 @@ public class TestThreadPoolExecutor {
         for (int i = 0; i < taskSize; i++) {
             System.out.println("task:" + i);
             try {
-                futureList.add(executor.submit(new TestCallable(i, 2)));
+                futureList.add(executor.submit(new MyCallable(i, 2)));
             } catch (Exception e) {
                 System.out.println("task:" + i + " 执行异常:" + e.getMessage());
             }
