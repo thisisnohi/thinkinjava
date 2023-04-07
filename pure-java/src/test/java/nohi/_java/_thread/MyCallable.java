@@ -11,18 +11,18 @@ import java.util.concurrent.TimeUnit;
  * @description <p></p>
  * @date 2022/10/19 11:06
  **/
-public class TestCallable implements Callable<String> {
+public class MyCallable implements Callable<String> {
     private static SecureRandom random = new SecureRandom();
     private String title;
     // 固定sleep时间
     Integer fixedSleep;
 
-    public TestCallable(int i, Integer fixedSleep) {
+    public MyCallable(int i, Integer fixedSleep) {
         title = "TestCallable\t" + i;
         this.fixedSleep = fixedSleep;
     }
 
-    public TestCallable(int i) {
+    public MyCallable(int i) {
         title = "TestCallable\t" + i;
     }
 
