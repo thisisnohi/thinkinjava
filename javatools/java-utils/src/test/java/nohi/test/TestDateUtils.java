@@ -1,8 +1,8 @@
 package nohi.test;
 
 import nohi.utils.DateUtils;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -23,7 +23,7 @@ public class TestDateUtils {
         String dateStr = DateUtils.format(date, DateUtils.SIMPLE_DATE);
         String nowStr = DateUtils.getNowStr();
         System.out.println("dateStr:" + dateStr + ",nowStr:" + nowStr);
-        Assert.assertEquals("日期格式不正确", dateStr, nowStr);
+        Assertions.assertEquals("日期格式不正确", dateStr, nowStr);
     }
 
     @Test
